@@ -5,3 +5,6 @@ http://stackoverflow.com/questions/426258/setting-checked-for-a-checkbox-with-jq
 
 #APi d efectos
 http://api.jquery.com/category/effects/
+
+#Callbacks
+http://www.desarrolloweb.com/articulos/callback-funciones-jquery.html

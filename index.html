@@ -35,6 +35,22 @@
                     }
                     
                 });
+                $("#ocultar").click(function(evento2){
+                    evento2.preventDefault();
+                    $("#capaefectos").hide("slow");
+                });
+                $("#mostrar").click(function(evento2){
+                    evento2.preventDefault();
+                    $("#capaefectos").show("3000");
+                });
+
+                $("#pilallamadas").click(function(event){
+		event.preventDefault();
+		$("#micapa").fadeOut(1000, function(){
+			$("#micapa").css({'top': 300, 'left':200});
+			$("#micapa").fadeIn(1000);
+		});
+	});
             });
         </script>
     </head>
@@ -49,8 +65,13 @@ Esta capa es independiente y voy a añadir y eliminar clases css sobre ella
 <a href="http://www.muckisoft.com">Añadir y quitar clase en la capa de arriba</a>
             </li>
             <li>
+                <br>    
+                Mostrar de manera dinñamica elementos en un formulario
+                <br>
+                <br>
                 <form>
 Nombre: <input type="text" name="nombre">
+<br>
 <br>
 <input type="checkbox" name="mayor_edad" value="1" id="mayoria_edad"> Soy mayor de edad
 <br>
@@ -61,7 +82,32 @@ Dato para mayores de edad: <input type="text" name="mayores_edad">
 
             </li>
             <li>
+                <br>
                 Ejemplo de efectos e interacción con jQuery
+                <br>
+                <div id="capaefectos" style="background-color: #cc7700; color:fff; padding:10px;">
+                Esto es una capa que nos servirá para hacer efectos!
+                <br>  
+                <br>
+                Pongo este texto simplemente de prueba.
+                <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget rutrum ex. Aliquam nec odio a dui aliquet accumsan laoreet non urna. Sed iaculis, nisl eget pharetra gravida, ex massa maximus ante, nec semper tortor felis vel est. Ut varius erat ac ante pretium porta. Mauris vestibulum rutrum purus, non elementum velit condimentum a. Curabitur dolor ligula, convallis eu cursus quis, tincidunt eget enim. Praesent tempor enim quis nisl iaculis faucibus. Aliquam et orci ac lacus maximus efficitur. In sagittis et nulla nec aliquam. Pellentesque dictum tellus id tellus facilisis bibendum. Vestibulum non dignissim elit. Nulla nec enim facilisis, ultricies lectus tristique, lacinia lorem. Suspendisse a iaculis nisi. Maecenas dictum nec turpis vitae maximus. Etiam id ullamcorper libero.</em>
+                </div>
+                <p>
+                    <a href="#" id="ocultar">Ocultar la capa</a>
+                    <a href="#" id="mostrar">Mostrar la capa</a>
+                </p>
+            </li>
+            <li>
+                <div id="micapa" style="background-color: #cc7700; color:fff; padding:10px; width: 300px; height: 130px; position: absolute; top: 10px; left: 500px;">
+<ul>
+<li>Voy a probar el callback</li>
+<li>Para ejecutar unas funciones después de otras</li>
+<li>Que me sirve, por ejemplo, para encadenar efectos</li>
+</ul>
+</div>
+<br>
+<br>
+<a href="#" id="pilallamadas">Hacer varias llamadas con callback</a>
             </li>
 
         </ul>
