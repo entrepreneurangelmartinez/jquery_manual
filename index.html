@@ -51,6 +51,13 @@
 			$("#micapa").fadeIn(1000);
 		});
 	});
+
+    $("#enlaceajax").click(function(evento){
+        //Elimino el comportamiento por defecto
+        evento.preventDefault();
+        //Aquí pongo el comportamiento de la llamada
+        $("#destino").load("contenido-ajax.html");
+    });
             });
         </script>
     </head>
@@ -109,7 +116,15 @@ Dato para mayores de edad: <input type="text" name="mayores_edad">
 <br>
 <a href="#" id="pilallamadas">Hacer varias llamadas con callback</a>
             </li>
+            <li>
+                <br>    
+                Traer un contenido con Ajax al pulsar un enlace
+                <br>
+                <a href="#" id="enlaceajax">Haz clic!</a>
+                <div id="destino">
 
+                </div>
+                </li>
         </ul>
     </body>
 </html>
