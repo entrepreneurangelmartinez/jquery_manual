@@ -57,6 +57,17 @@
         evento.preventDefault();
         //Aquí pongo el comportamiento de la llamada
         $("#destino").load("contenido-ajax.html");
+
+    });
+
+        $("#enlaceajax2").click(function(evento){
+        //Elimino el comportamiento por defecto
+        evento.preventDefault();
+        //Aquí pongo el comportamiento de la llamada
+         $("#destino").load("recibe-parametros.php", {nombre: "Pepe", edad: 45}, function(){
+         alert("recibidos los datos por ajax");
+      });
+
     });
             });
         </script>
@@ -123,6 +134,14 @@ Dato para mayores de edad: <input type="text" name="mayores_edad">
                 <a href="#" id="enlaceajax">Haz clic!</a>
                 <div id="destino">
 
+                </div>
+                <br>
+                </li>
+                 <li>                 
+                Traer un contenido con Ajax al pulsar un enlace
+                <br>
+                <a href="#" id="enlaceajax2">Haz clic!</a>
+                <div id="destino2">
                 </div>
                 </li>
         </ul>
